@@ -60,15 +60,6 @@ st.markdown("""
         margin-bottom: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
-
-    /* 特别说明样式 */
-    .instructions {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        margin-top: 30px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
     
     /* 列间距调整 */
     .stColumn {
@@ -152,18 +143,8 @@ with col2:
         st.markdown(f'<div class="metric-card">热解油中酸含量（%）: {predictions["热解油中酸含量（%）"]}</div>',
                     unsafe_allow_html=True)
 
-        # 原始数据查看
-        with st.expander("查看原始JSON数据"):
-            st.json(st.session_state.result)
     else:
         st.info("请输入参数并点击预测按钮获取结果")
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# 特别说明
-st.markdown('<div class="instructions">', unsafe_allow_html=True)
-st.subheader("特别说明")
-st.markdown("""
-如需查看原始数据，可在预测结果处展开"查看原始JSON数据"部分
-""")
-st.markdown('</div>', unsafe_allow_html=True)
