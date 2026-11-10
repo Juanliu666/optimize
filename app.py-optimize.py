@@ -128,7 +128,8 @@ with col2:
 
         # 使用指标卡片展示结果
         predictions = st.session_state.result["predictions"]
-
+        # 将所有预测值格式化为保留两位小数的字符串
+        formatted_predictions = {key: f"{float(value):.2f}" for key, value in predictions.items()}
         st.markdown(f'<div class="metric-card">气体中CH4含量（%）: {predictions["气体中CH4含量（%）"]}</div>',
                     unsafe_allow_html=True)
         st.markdown(f'<div class="metric-card">气体中CO2含量（%）: {predictions["气体中CO2含量（%）"]}</div>',
