@@ -1,4 +1,4 @@
-  absl-py==2.3.1
+ absl-py==2.3.1
  altair==4.2.2
  astunparse==1.6.3
  attrs==25.3.0
